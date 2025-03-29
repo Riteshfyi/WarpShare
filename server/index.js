@@ -12,6 +12,7 @@ const io = new Server(server, {
     origin: "*",
 
   },
+  addTrailingSlash: false 
 });
 
 
