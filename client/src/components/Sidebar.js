@@ -129,7 +129,7 @@ export default function Sidebar({
           <label className="cursor-pointer bg-gray-700 p-2 rounded-lg hover:bg-gray-600 inline-block">
             <input type="file" className="hidden" onChange={handleFileChange} />
             {uploadFile
-              ? `Selected: ${truncateFileName(uploadFile.name, 15)}`
+              ? `${truncateFileName(uploadFile.name, 15)}`
               : `Select File`}
           </label>
           <button

@@ -1,4 +1,3 @@
-// App.js
 import { useEffect, useState, useRef } from "react";
 import { io } from "socket.io-client";
 import Peer from "simple-peer";
@@ -33,7 +32,7 @@ function App() {
   const socketRef = useRef(null);
 
  
-  const API = "http://localhost:5000";
+  const API = "https://warpshareapi.vercel.app/";
 
   useEffect(() => {
     const socket = io(API);
@@ -220,7 +219,7 @@ function App() {
 
     const peer = peerRef.current;
     const file = uploadFile;
-    const chunkSize = 16 * 1024;
+    const chunkSize = 32 * 1024;
     let offset = 0;
 
     const readAndSendChunk = () => {

@@ -1,7 +1,7 @@
 let chunks = [];
 let startTime;
 let fileSize;
-let chunkSize = 16000;
+let chunkSize = 32*1024;
 let currentChunk = 0;
 let totalChunks;
 let currentProgress = 0;
