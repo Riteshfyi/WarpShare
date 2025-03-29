@@ -32,7 +32,7 @@ function App() {
   const socketRef = useRef(null);
 
  
-  const API = "https://warpshareapi.vercel.app/";
+  const API = "https://warpshareapi.vercel.app";
 
   useEffect(() => {
     const socket = io(API);
