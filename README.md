@@ -1,80 +1,117 @@
-WarpShare
-WarpShare is a real-time file sharing and messaging platform that enables fast, secure, and peer-to-peer transfers without intermediaries. Built using WebRTC & Socket.io, it allows users to exchange files and messages instantly over the web.
 
-🚀 Features
-LAN-based Peer-to-Peer File Sharing
-Enables high-speed file transfers between devices on the same local network.
+---
 
-WebRTC-powered Transfers
-Utilizes WebRTC for direct peer-to-peer communication, bypassing central servers for actual file data transfer.
+# 🚀 WarpShare
 
-Chunk-based File Transfer
-Supports large file sharing by breaking data into 32KB chunks, improving reliability and performance.
+**WarpShare** is a real-time file sharing and messaging platform that enables fast, secure, and peer-to-peer transfers without intermediaries. Built using **WebRTC** & **Socket.io**, it allows users to exchange files and messages instantly over the web.
 
-WebSocket Signaling
-Uses Socket.io for real-time signaling between peers, allowing seamless session setup and connection negotiation.
+---
 
-Node.js STUN Server Integration
-Custom signaling via a Node.js-based STUN server enables discovery and connection between peers.
+## ✨ Features
 
-Asynchronous File Processing
-Uses Node.js workers to manage concurrent file read/write operations without blocking the main thread.
+* **LAN-based Peer-to-Peer File Sharing**
+  High-speed file transfers between devices on the same local network.
 
-Secure & Fast
-Transfers occur directly between peers on the same network, minimizing latency and reducing external exposure.
+* **WebRTC-powered Transfers**
+  Direct peer-to-peer communication, bypassing central servers for file data transfer.
+  
+* **Supports Large File Transfers**
+ Uses file streaming to efficiently handle and transfer large files.
 
-🛠️ Tech Stack
-Frontend: React.js
+* **Chunk-based File Transfer**
+  Large files are broken into 32KB chunks for improved performance and reliability.
 
-Backend: Node.js, Express
+* **WebSocket Signaling**
+  Real-time signaling between peers via Socket.io for seamless connection setup.
 
-Real-time Communication: WebRTC, Socket.io
+* **Node.js STUN Server Integration**
+  Custom Node.js-based STUN server to facilitate peer discovery and negotiation.
 
-Worker Threads: Node.js Worker Threads for non-blocking operations
+* **Asynchronous File Processing**
+  Node.js worker threads manage file sending/receiving concurrently without blocking.
 
-STUN/Signaling: Custom WebSocket-based server
+* **Secure & Fast**
+  Transfers occur directly over the local network, reducing latency and external exposure.
 
-📷 Demo
-Coming soon...
+---
 
-🔧 Installation & Setup
-Clone the repo
+## 🛠️ Tech Stack
 
-bash
-Copy
-Edit
+* **Frontend**: React.js
+* **Backend**: Node.js, Express
+* **Real-time Communication**: WebRTC, Socket.io
+* **Workers**: Node.js Worker Threads
+* **Signaling/STUN**: Custom WebSocket-based server
+
+---
+
+## 📷 Demo
+
+🚧 Coming soon...
+
+---
+
+## 🔧 Installation & Setup
+
+### 1. Clone the repository
+
+```bash
 git clone https://github.com/Riteshfyi/WarpShare.git
 cd WarpShare
-Install dependencies
+```
 
-bash
-Copy
-Edit
-npm install       # for backend
+### 2. Install dependencies
+
+**Backend:**
+
+```bash
+cd server
+npm install
+```
+
+**Frontend:**
+
+```bash
 cd client
-npm install       # for frontend
-Run the app
+npm install
+```
 
-bash
-Copy
-Edit
-# In the root directory
-npm run dev       # Runs both client and server concurrently
-Access the app
-Open your browser and visit: http://localhost:3000
+### 3. Run the app
 
-📡 How It Works
-On connection, peers are introduced via the signaling server.
+In the root directory:
 
-WebRTC establishes a direct peer-to-peer link.
+```bash
+cd client
+npm run dev
+cd ..
+cd server
+node index.js
+```
 
-Files are read, chunked into 32KB packets, and streamed to the other peer.
+Visit: [http://localhost:3000](http://localhost:3000)
 
-The receiving peer reconstructs the file using a worker for efficient processing.
+---
 
-💡 Use Cases
-Quick file sharing during local hackathons or LAN parties.
+## 📡 How It Works
 
-Sharing media or documents within a private network without external servers.
+1. Peers connect to a signaling server using WebSockets.
+2. WebRTC establishes a direct peer-to-peer connection.
+3. Files are read, chunked into 32KB packets, and sent via the WebRTC data channel.
+4. Node.js workers handle file receiving and reassembly on the other end.
 
-Secure messaging and file transfer within intranet environments.
+---
+
+## 💡 Use Cases
+
+* Quick file sharing during hackathons or LAN events.
+* Sharing files securely within an internal network.
+* Local peer-to-peer messaging without third-party dependencies.
+
+---
+
+## 📄 License
+
+This project is licensed under the [MIT License](LICENSE).
+
+---
+
