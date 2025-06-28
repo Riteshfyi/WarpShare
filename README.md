@@ -11,7 +11,8 @@
 
 As a student, I often faced situations where I needed to transfer large files—like software tools such as Vivado—from friends, but didn’t have a high-capacity pen drive or external storage. In such cases, file sharing becomes unnecessarily complicated.
 
-In college environments, a lot of bandwidth and time is wasted downloading files from the internet—when in reality, many peers already have the required resources. **WarpShare** was built to solve this: enabling fast, peer-to-peer file transfers over LAN, without relying on external devices or the internet.
+In college environments, a lot of bandwidth and time is wasted downloading files from the internet—when in reality, many peers already have the required resources. **WarpShare** was built to solve this: enabling fast, peer-to-peer file transfers over LAN..
+![image](https://github.com/user-attachments/assets/8856acfa-9677-427d-87e3-2b8b98674535)
 
 ---
 
