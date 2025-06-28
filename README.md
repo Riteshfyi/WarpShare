@@ -3,9 +3,17 @@
 
 # 🚀 WarpShare
 
-**WarpShare** is a real-time file sharing and messaging platform that enables fast, secure, and peer-to-peer transfers without intermediaries. Built using **WebRTC** & **Socket.io**, it allows users to exchange files and messages instantly over the web.
+**WarpShare** is a real-time peer to peer file sharing and messaging platform that enables fast, secure, and peer-to-peer transfers without intermediaries. Built using **WebRTC** & **Socket.io**, it allows users to exchange files and messages instantly over the local area network.
 
 ---
+
+## 💭 Motivation
+
+As a student, I often faced situations where I needed to transfer large files—like software tools such as Vivado—from friends, but didn’t have a high-capacity pen drive or external storage. In such cases, file sharing becomes unnecessarily complicated.
+
+In college environments, a lot of bandwidth and time is wasted downloading files from the internet—when in reality, many peers already have the required resources. **WarpShare** was built to solve this: enabling fast, peer-to-peer file transfers over LAN, without relying on external devices or the internet.
+
+--
 
 ## ✨ Features
 
