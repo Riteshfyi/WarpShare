@@ -54,7 +54,7 @@ In college environments, a lot of bandwidth and time is wasted downloading files
 
 ---
 
-🔮 Future Plans
+## 🔮 Future Plans
 Implement in Java: Rewriting the core chunking and transfer logic in Java to significantly boost performance and enable faster file transfers, especially for larger files.
 
 
