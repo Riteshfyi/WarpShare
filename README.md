@@ -13,7 +13,7 @@ As a student, I often faced situations where I needed to transfer large files—
 
 In college environments, a lot of bandwidth and time is wasted downloading files from the internet—when in reality, many peers already have the required resources. **WarpShare** was built to solve this: enabling fast, peer-to-peer file transfers over LAN, without relying on external devices or the internet.
 
---
+---
 
 ## ✨ Features
 
@@ -52,6 +52,10 @@ In college environments, a lot of bandwidth and time is wasted downloading files
 * **Signaling/STUN**: Custom WebSocket-based server
 
 ---
+
+🔮 Future Plans
+Implement in Java: Rewriting the core chunking and transfer logic in Java to significantly boost performance and enable faster file transfers, especially for larger files.
+
 
 ## 📷 Demo
 
