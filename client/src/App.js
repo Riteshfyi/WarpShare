@@ -31,8 +31,7 @@ function App() {
   const peerRef = useRef(null);
   const socketRef = useRef(null);
 
- 
-  const API = "https://warpshareapi.vercel.app";
+  const API = "https://warpshare-kdd8.onrender.com";
 
   useEffect(() => {
     const socket = io(API);
@@ -56,7 +55,6 @@ function App() {
       }
     });
 
-    
     workerRef.current = new Worker(
       new URL("./workers/worker.js", import.meta.url)
     );
@@ -176,13 +174,14 @@ function App() {
       return;
     }
 
-    
     if (parsedData.message) {
-      setMessages((prev) => [...prev, { from: senderId, text: parsedData.message }]);
+      setMessages((prev) => [
+        ...prev,
+        { from: senderId, text: parsedData.message },
+      ]);
       return;
     }
 
-    
     if (parsedData.chunk) {
       setFileReceiving(true);
       handleReceivingData(parsedData.chunk);
@@ -293,14 +292,11 @@ function App() {
 
   return (
     <div className="flex flex-col min-h-screen bg-gray-700 text-gray-100">
-      
       <div className="p-4 bg-indigo-600 border-b border-indigo-700">
         <h1 className="text-2xl font-bold">WarpShare</h1>
       </div>
 
-
       <div className="flex flex-1">
-
         <div className="w-full md:w-1/3 lg:w-1/4 border-r border-gray-600">
           <Sidebar
             userId={userId}
@@ -326,7 +322,6 @@ function App() {
           />
         </div>
 
-        
         <div className="flex-1 p-4">
           <Chat
             disabled={!isConnected}
